@@ -1,4 +1,3 @@
-<!-- origenal : https://codepen.io/dishabansal/pen/xypOBB -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,35 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculator</title>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=MuseoModerno:wght@300;400&display=swap" rel="stylesheet">
-
-
     <style>
-
 body {
   margin: 0 auto;
   text-align: center;
-  font-size: 23px;
-
-
-}
-
-.main {
-  max-width: 10%;
-}
-
-
-
-
-.button > .over {
-  text-decoration:overline;
-  display: inline-block;
-  position:relative;
-  top: 3px;
-  left: -4px;
+  font-size: 11.5px; /* metade do original */
 }
 
 .calculator {
-  
     display: inline-block;
     background: white;
     margin: 1% 0;
@@ -42,43 +20,49 @@ body {
     border: 3px solid #000000;
     border-radius: 5px;
     box-shadow: 2px 2px 1px 0px #000000;
-    max-width: 240px;
-
-  
+    max-width: 120px; /* metade do original */
 }
 
 .calculator .button {
-  
-    font-size: x-large;
-    width: 2em;
-    min-height: 2em;
-    margin: 0.8%;
+    font-size: large; /* metade do original */
+    width: 1em; /* metade do original */
+    min-height: 1em; /* metade do original */
+    margin: 0.4%; /* metade do original */
     border-radius: 15%;
-    border: 0.08em solid #000;
+    border: 0.04em solid #000; /* metade do original */
     font-family: monospace;
     background: white;
-    box-shadow: 0.03em  0.03em 0.01em 0px #000000;
-
-
-}
-
-.calculator .accent{
-   background: #fca7c0;  background: #fca7c0;;
+    box-shadow: 0.015em 0.015em 0.005em 0px #000000; /* metade do original */
 }
 
 .calculator .space {
-  
-    font-size: x-large;
-    width: 2.4em;
-    min-height: 2.4em;
-    margin: 0.5%;
+    font-size: large; /* metade do original */
+    width: 1.2em; /* metade do original */
+    min-height: 1.2em; /* metade do original */
+    margin: 0.25%; /* metade do original */
     border-radius: 15%;
-    border: 0.08em solid #ffffff;
+    border: 0.04em solid #ffffff; /* metade do original */
     background: white;
-
-
 }
 
+#screen {
+    border: 3px solid #000000;
+    border-radius: 5px;
+    width: 40%; /* metade do original */
+    height: 25px; /* metade do original */
+    margin: 5%;
+    text-align: right;
+    overflow: auto;
+    overflow-wrap: break-word;
+    font-size: 15px; /* metade do original */
+    font-family: monospace;
+    background-color: #000;
+    color: #fff;
+}
+
+.calculator .accent {
+    background: #fca7c0;
+}
 
 .calculator button:hover,
 #backspace:hover {
@@ -86,13 +70,13 @@ body {
   color:#000000;
   transform: scale(0.9);
   border-radius: 20%;
-
 }
 
-.calculator 
-#clear:hover , #rad:hover  ,#deg:hover{
-  background: rgb(0, 0, 0)!important;
-  color:#ffffff;
+.calculator #clear:hover,
+#rad:hover,
+#deg:hover {
+  background: rgb(0, 0, 0) !important;
+  color: #ffffff;
   transform: scale(0.9);
   border-radius: 20%;
 }
@@ -106,42 +90,16 @@ body {
 .button:active,
 .button-active {
   background: rgb(0, 0, 0);
-  color:#ffffff;
+  color: #ffffff;
   transform: scale(0.8);
 }
 
- #screen{
-
-    border: 3px solid #000000;
-    border-radius: 5px;
-    width: 80%;
-    height: 50px;
-    margin : 5%;
-    text-align: right;
-    overflow: auto;
-    overflow-wrap: break-word;
-    font-size: 30px;
-    font-family: monospace;
-    background-color: #000;
-    color: #fff;
-
-}
-
-    
-#clean {
+#clean, #rad, #deg {
   background: rgb(27, 27, 27);
-  color:#ffffff;
-}
-#rad {
-  background: rgb(27, 27, 27);
-  color:#ffffff;
-}
-#deg {
-  background: rgb(27, 27, 27);
-  color:#ffffff;
+  color: #ffffff;
 }
 
-.rows{
+.rows {
     margin: 5%;
 }
 
@@ -159,78 +117,62 @@ body {
 
 .calculator__row5 {
   margin-bottom: 3%;
-} 
+}
 
 .footer {
-
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
 }
-
-
     </style>
 </head>
 <body>
     <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet">
 <div id="main">
-		<div class="calculator">
-		<input type="text" id="screen">
-
-        <div class="rows">
-            <div class="calculator__row1">
-
-                <button class="button accent">(</button>
-                <button class="button accent">)</button>
-                <div class="space" ></div>
-                <div class="space" ></div>
-                <button class="button" id="clean">AC</button>
-            </div>
-                <div class="calculator__row2">
-
-                  <button class="button accent">x^</button>
-                       <button class="button ">7</button>
-                        <button class="button ">8</button>
-                        <button class="button ">9</button>
-                        <button class="button accent">*</button>
-                </div>
-                <div class="calculator__row3">
-               
-
-                    <button class="button accent">%</button>
-                      <button class="button ">4</button>
-                        <button class="button ">5</button>
-                        <button class="button ">6</button>
-                        <button class="button accent">/</button>
-                </div>
-                <div class="calculator__row4">
-                  <button class="button accent">&radic;<span class="over"></span></button>
-                        <button class="button ">1</button>
-                        <button class="button ">2</button>
-                        <button class="button ">3</button>
-                        <button class="button accent">-</button>
-                </div>
-                        <div class="calculator__row5">
-               
-                          <div class="space" ></div>
-                        <button class="button accent">.</button>
-                  <button class="button ">0</button>
-                        <button class="button accent">=</button>
-                        <button class="button accent">+</button>
-            </div>
-
+    <div class="calculator">
+    <input type="text" id="screen">
+    <div class="rows">
+        <div class="calculator__row1">
+            <button class="button accent">(</button>
+            <button class="button accent">)</button>
+            <div class="space"></div>
+            <div class="space"></div>
+            <button class="button" id="clean">AC</button>
         </div>
-
-
+        <div class="calculator__row2">
+            <button class="button accent">x^</button>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button accent">*</button>
+        </div>
+        <div class="calculator__row3">
+            <button class="button accent">%</button>
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button accent">/</button>
+        </div>
+        <div class="calculator__row4">
+            <button class="button accent">&radic;<span class="over"></span></button>
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button accent">-</button>
+        </div>
+        <div class="calculator__row5">
+            <div class="space"></div>
+            <button class="button accent">.</button>
+            <button class="button">0</button>
+            <button class="button accent">=</button>
+            <button class="button accent">+</button>
+        </div>
+    </div>
+    </div>
 </div>
-</div>
 
-	
-		
-	
 </body>
-
 <script>
 var display = document.getElementById("screen");
 var buttons = document.getElementsByClassName("button");
@@ -297,13 +239,11 @@ var buttons = document.getElementsByClassName("button");
   });
 });
 
-
 function syntaxError() {
   if (eval(display.value) == SyntaxError || eval(display.value) == ReferenceError || eval(display.value) == TypeError) {
     display.value == "Syntax Error";
   }
 }
-
 
 function equals() {
   if ((display.value).indexOf("^") > -1) {
@@ -320,7 +260,6 @@ function equals() {
 function clear() {
   display.value = "";
 }
-
 
 function multiply() {
   display.value += "*";
@@ -372,7 +311,6 @@ function sin() {
   display.value = Math.sin(display.value);
 }
 
-	
 function cos() {
   display.value = Math.cos(display.value);
 }
@@ -393,7 +331,6 @@ function exponent() {
   display.value += "^";
 }
 
-
 function radians() {
   display.value = display.value * (Math.PI / 180);
 }
@@ -401,7 +338,5 @@ function radians() {
 function degrees() {
   display.value = display.value * (180 / Math.PI);
 }
-
 </script>
-
 </html>
